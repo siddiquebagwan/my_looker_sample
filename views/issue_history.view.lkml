@@ -1,3 +1,5 @@
+include: "book.view"
+
 view: issue_history {
   sql_table_name: public.issue_history ;;
 
@@ -14,5 +16,12 @@ view: issue_history {
   measure: count {
     type: count
     drill_fields: [book_name, user_name]
+  }
+}
+
+view: +book {
+  dimension: issue_date2 {
+    type: string
+    sql: ${TABLE}."date" ;;
   }
 }
