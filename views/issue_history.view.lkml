@@ -18,10 +18,3 @@ view: issue_history {
     drill_fields: [book_name, user_name]
   }
 }
-
-view: +book {
-  dimension: issue_date2 {
-    type: string
-    sql: ${TABLE}."date" ;;
-  }
-}

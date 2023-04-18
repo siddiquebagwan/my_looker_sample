@@ -18,10 +18,3 @@ view: +book {
     sql: ${TABLE}."date" ;;
   }
 }
-
-view: +book {
-  dimension: issue_date {
-    type: string
-    sql: ${TABLE}."date" ;;
-  }
-}
